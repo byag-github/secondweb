@@ -1,3 +1,66 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+.swing-container {
+    animation: swing 3s ease-in-out infinite;
+    transform-origin: left right;
+    -webkit-animation: swing 3s ease-in-out infinite;
+}
+
+.notice-text {
+    color: rgb(255, 0, 0);
+    font-style: italic;
+    margin: 0;
+    animation: blink 0.7s infinite;
+    -webkit-animation: blink 0.7s infinite;
+}                                       /* CSS PENGEMBANGAN END */
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+        /* Teks terlihat */
+    }
+
+    50% {
+        opacity: 0;
+        /* Teks tidak terlihat */
+    }
+}
+
+.development-notice {
+    line-height: 2;
+    width: 100%;
+    text-align: center;
+    background-color: #ffe6e6;
+    border: 1px solid #000000;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    border-radius: 5px;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+}
+
 /* General styles */
 body, html {
     align-items: center;
